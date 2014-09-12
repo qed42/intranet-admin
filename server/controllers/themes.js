@@ -104,7 +104,7 @@ exports.customCssUpdate = function(req, resp) {
 };
 
 exports.set_current_theme = function(req, resp) {
-  var outputFile = config.root + '/default_theme.js';
+  var outputFile = config.root + '/theme.js';
   var output = req.query.theme_name;
   var stream = fs.createWriteStream(outputFile);
   stream.once('open', function(fd) {
