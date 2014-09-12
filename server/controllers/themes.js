@@ -1,6 +1,7 @@
 'use strict';
 
 var request = require('request');
+
 var cfg = require('../../config');
 var fs = require('fs');
 var config = require('meanio').loadConfig();
@@ -114,5 +115,4 @@ exports.set_current_theme = function(req, resp) {
     stream.end();
     resp.send('Done');
   });
-
 };
