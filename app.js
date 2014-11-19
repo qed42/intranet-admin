@@ -24,7 +24,7 @@ Admin.register(function(app, auth, database) {
     global: true
   });
 
-  Admin.aggregateAsset('js', '/node_modules/mean-admin/public/assets/lib/zeroclipboard/dist/ZeroClipboard.min.js', {
+  Admin.aggregateAsset('js', '/node_modules/mean-admin/public/assets/lib/zeroclipboard/dist/ZeroClipboard.js', {
     absolute: true,
     global: true
   });
