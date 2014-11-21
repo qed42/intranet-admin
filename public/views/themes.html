@@ -1,17 +1,17 @@
-<section data-ng-controller="ThemesController" data-ng-show="themes" id="themes" data-ng-init="init()">
+<section data-ng-controller="ThemesController" data-ng-show="themes" id="themes" style="margin-top:100px" data-ng-init="init()">
   <div class="progress progress-striped active" style="display:none">
     <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%">
       <span class="sr-only">Almost there. Updating theme</span>
     </div>
   </div>
 
-  <img data-ng-repeat="theme in themes" ng-src="{{theme.thumbnail}}" alt="" data-ng-click="changeTheme(theme)" style="width:300px; height:200px; margin-right:25px; margin-bottom: 25px; cursor:pointer">
-
-  <button style="width:300px; height:200px; margin-right:25px; margin-bottom: 25px;" data-ng-click="defaultTheme()">Default Theme</button>
-  <div class ='custom-themes-container'>
-    <h2 style="color :888; border-bottom : 2px solid #999; padding-bottom : 9px; margin-bottom : 15px;"> My Custom Themes </h3>
-      <div class="list" data-ng-repeat="customTheme in customThemes" data-ng-click="changeCustomTheme(customTheme)" style="float:left; width:300px; height:200px; margin-right:25px; margin-bottom: 25px; cursor:pointer" ><img src="{{customTheme.thumbnail}}"/><div class="theme-label">{{customTheme.name}}</div>
+  <div class="page-header">
+    <h1>Themes available for Intranet <small>Select appropriate theme</small></h1>
+  </div>
+  <div data-ng-repeat="theme in customThemes" data-ng-click="changeCustomTheme(theme)" style="float:left;cursor:pointer">
+    <img ng-src="{{theme.thumbnail}}" alt="{{theme.name}}"  style="width:300px; height:200px; margin-right:25px; margin-bottom: 25px;" class="thumbnail">
+    <div class="caption text-center">
+      <h3>{{theme.description}}</h3>
     </div>
-    <button style="float:left; width:300px; height:200px; margin-right:25px; margin-bottom: 25px;" data-ng-click="changeCustomTheme('default')">Default Theme</button>
   </div>
 </section>
